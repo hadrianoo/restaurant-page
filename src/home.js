@@ -28,13 +28,11 @@ export const homePage = () => {
         name.appendChild(mac);
         intro.appendChild(name);
 
-
         intro.appendChild(since);
 
         barContainer.appendChild(bar);
         barContainer.appendChild(loading);
         intro.appendChild(barContainer);
-
 
         nameButtons.appendChild(viewMenuButton);
         nameButtons.appendChild(bookTableButton);
@@ -49,7 +47,7 @@ export const homePage = () => {
         const servedNumber = document.createElement("div");
 
         served.id = "served";
-        title.id = "title";
+        title.className = "title";
 
         title.textContent = "// total customers served";
         servedNumber.textContent = "1 554 420";
@@ -62,10 +60,112 @@ export const homePage = () => {
 
     const specialSection = () => {
 
+        const specialsList = [
+            {
+                1: "FEATURED",
+                2: "404 Burger",
+                3: "Ingredients not found — but it still tastes great.",
+                4: "$8.99",
+            },
+            {
+                1: "SPICY",
+                2: "Firewall Fries",
+                3: "So hot they block your entire digestive system.",
+                4: "$4.99",
+            },
+            {
+                1: "NEW",
+                2: "Cache Cleanse",
+                3: "Wipes your history and your gut. Guaranteed.",
+                4: "$6.49",
+            }
+        ]
+        const specials = document.createElement("div");
+        const title = document.createElement("div");
+        const specialsContainer = document.createElement("div");
+
+        title.className = "title";
+        specials.id = "specials";
+
+        title.textContent = "// today's specials";
+
+        for (const obj of specialsList) {
+            const homeDish = document.createElement("div");
+            const first = document.createElement("div");
+            const second = document.createElement("div");
+            const third = document.createElement("div");
+            const forth = document.createElement("div");
+
+            homeDish.className = "home-dish";
+
+            first.textContent = obj[1];
+            second.textContent = obj[2];
+            third.textContent = obj[3];
+            forth.textContent = obj[4];
+
+            homeDish.appendChild(first);
+            homeDish.appendChild(second);
+            homeDish.appendChild(third);
+            homeDish.appendChild(forth);
+
+            specialsContainer.appendChild(homeDish);
+        }
+        specials.appendChild(title);
+        specials.appendChild(specialsContainer);
+
+        return specials;
     }
 
     const reviewSection = () => {
 
+        const reviewList = [
+            {
+                1: "@xXRootKitXx",
+                2: "Power User",
+                3: "The SQL Injection Soup literally dropped my table. 10/10 would overflow again.",
+            },
+            {
+                1: "@n00b_eater",
+                2: "Lurker",
+                3: "Ordered the Phishing Salad. Got a burger. Didn't click any links this time.",
+            },
+            {
+                1: "@ProxyGourmet",
+                2: "Moderator",
+                3: "VPN Wrap was so layered I never found the actual food. Still full somehow.",
+            }
+        ]
+        const reviews = document.createElement("div");
+        const title = document.createElement("div");
+        const reviewContainer = document.createElement("div");
+
+        title.className = "title";
+        reviews.id = "reviews";
+
+        title.textContent = "// customer reviews";
+
+        for (const obj of reviewList) {
+            const review = document.createElement("div");
+            const first = document.createElement("div");
+            const second = document.createElement("div");
+            const third = document.createElement("div");
+
+            review.className = "review";
+
+            first.textContent = obj[1];
+            second.textContent = obj[2];
+            third.textContent = obj[3];
+
+            review.appendChild(first);
+            review.appendChild(second);
+            review.appendChild(third);
+
+            reviewContainer.appendChild(review);
+        }
+        reviews.appendChild(title);
+        reviews.appendChild(reviewContainer);
+
+        return reviews;
     }
 
     return {
