@@ -91,7 +91,7 @@ nav {
 #content {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 2fr min-content 1fr 1fr min-content;
+    grid-template-rows: 2fr min-content 1fr 1fr;
 
 }
 
@@ -200,7 +200,6 @@ nav {
 
 footer {
     border-top: 1px solid var(--color-border);
-    grid-row: 4;
     display: flex;
     background-color: var(--color-bg-nav);
     justify-content: space-between;
