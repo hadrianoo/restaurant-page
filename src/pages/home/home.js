@@ -177,11 +177,6 @@ export const homePage = () => {
     homeContainer.appendChild(reviewSection());
 
 
-    return {
-        // introSection,
-        // servedSection,
-        // specialSection,
-        // reviewSection
-        homeContainer,
-    }
+    return homeContainer;
+
 }

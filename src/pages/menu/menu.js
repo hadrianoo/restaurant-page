@@ -61,7 +61,5 @@ export const menuPage = () => {
 
     menuContainer.appendChild(menuHeader());
     menuContainer.appendChild(menuContent());
-    return {
-        menuContainer,
-    }
+    return menuContainer;
 };

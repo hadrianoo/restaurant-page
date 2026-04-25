@@ -5,7 +5,7 @@ export const footerPage = () => {
     const thirdDiv = document.createElement("div");
 
     firstDiv.textContent = "WebMac Corp. © 1993-2026";
-    secondDiv.textContent = "ISO 9001 | GDPR Compliant | Michelin * (unverified)";
+    secondDiv.textContent = "Hadriano, Founder & CEO";
     thirdDiv.textContent = "Ping: 2ms | Uptime: 99.9%";
 
     footer.appendChild(firstDiv);

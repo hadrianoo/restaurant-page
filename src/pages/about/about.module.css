@@ -1,0 +1,15 @@
+.aboutContainer {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr repeat(4, min-content);
+}
+
+.aboutMd {}
+
+.readmeTxt {}
+
+.mission {}
+
+.kitchen {}
+
+.certification {}
