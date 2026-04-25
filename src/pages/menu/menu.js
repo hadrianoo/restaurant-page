@@ -1,3 +1,5 @@
+import styles from "./menu.module.css";
+
 export const menuPage = () => {
     const menu = [
         { name: "404 Burger", description: "Ingredients not found — but it still tastes great.", price: 8.99, category: "Mains" },
@@ -22,15 +24,40 @@ export const menuPage = () => {
         { name: "CAPTCHA Cake", description: "Prove you're human before ordering. Robots get nothing.", price: 8.49, category: "Desserts" },
     ];
 
-    const header = () => {
+    const menuHeader = () => {
         const container = document.createElement("div");
-        const menuHeader = document.createElement("div");
-
-
+        container.textContent = "MENU";
+        return container;
     };
 
+    const menuContent = () => {
+        const menuContainer = document.createElement("div");
 
+        for (const item of menu) {
+            const menuItem = document.createElement("div");
+            const name = document.createElement("div");
+            const description = document.createElement("div");
+            const price = document.createElement("div");
 
+            name.className = styles.name;
+            description.className = styles.description;
+            price.className = styles.price;
 
+            name.textContent = item.name;
+            description.textContent = item.description;
+            price.textContent = item.price;
 
+            menuItem.appendChild(name);
+            menuItem.appendChild(description);
+            menuItem.appendChild(price);
+
+            menuContainer.appendChild(menuItem);
+        }
+        return menuContainer;
+    };
+
+    return {
+        menuHeader,
+        menuContent,
+    }
 };
