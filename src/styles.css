@@ -63,7 +63,7 @@ body {
     padding: 0px;
     font-size: 1.6rem;
     background-color: var(--color-bg-primary);
-    color: var(--color-green);
+    color: var(--color-green-dim);
 }
 
 header {
@@ -72,7 +72,6 @@ header {
     justify-content: space-between;
     padding: 2rem 4rem;
     align-items: center;
-
 }
 
 header>.name {
@@ -84,8 +83,26 @@ nav {
     gap: 4rem;
 }
 
+nav>button {
+    color: var(--color-green-dim);
+    border: none;
+    background-color: var(--color-bg-nav);
+}
+
+nav>button:hover {
+    color: var(--color-green);
+}
+
 .name {
     display: flex;
+}
+
+.name>div:first-child {
+    color: var(--color-green);
+}
+
+.name>div:last-child {
+    color: var(--color-cyan);
 }
 
 #content {
@@ -123,19 +140,35 @@ nav {
     padding: 0.4rem;
     background-image: linear-gradient(to right, var(--color-green), var(--color-cyan));
     border-radius: 1rem;
+    margin-bottom: 0.6rem;
 }
 
+#name-buttons {
+    display: flex;
+    gap: 1rem;
+}
 
+#name-buttons>button {
+    padding: 1rem 1.4rem;
+    background-color: var(--color-bg-primary);
+    border: 1px solid grey;
+    border-radius: 0.8rem;
+    color: white;
+}
 
+#name-buttons>button:hover {
+    background-color: var(--color-bg-secondary);
+}
 
 
 #served {
     grid-row: 2;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     justify-self: center;
-    padding: 3rem 2rem;
+    padding: 2rem;
     border-left: 1px solid var(--color-border);
     border-right: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
@@ -143,21 +176,23 @@ nav {
     background-color: var(--color-bg-secondary);
 }
 
+#served>div:last-child {
+    color: var(--color-cyan);
+    font-size: 3rem;
+}
+
 #specials {
     grid-row: 3;
-
     margin-top: 3rem;
-
-
 }
 
 .title {
     text-transform: uppercase;
-    margin-left: 4rem;
+    margin: 2rem 0 2rem 4rem;
 }
 
 #served>.title {
-    margin-left: 0;
+    margin: 0;
 }
 
 #specials>div:last-child {
@@ -166,10 +201,7 @@ nav {
     border: 1px solid var(--color-border);
     width: 80%;
     justify-self: center;
-
-
 }
-
 
 .home-dish,
 .review {
@@ -181,11 +213,9 @@ nav {
     border-top: 1px solid var(--color-border);
     grid-row: 4;
     margin-top: 3rem;
-
 }
 
 #reviews>div:last-child {
-
     display: grid;
     grid-auto-flow: column;
     width: 80%;
@@ -199,6 +229,7 @@ nav {
 }
 
 footer {
+    margin-top: 1rem;
     border-top: 1px solid var(--color-border);
     display: flex;
     background-color: var(--color-bg-nav);
