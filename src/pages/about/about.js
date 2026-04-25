@@ -11,6 +11,7 @@ export const aboutPage = () => {
         const contentTwo = document.createElement("div");
 
         container.className = styles.aboutMd;
+        title.className = styles.title;
 
         title.textContent = "// ABOUT.MD";
         contentOne.textContent = "Who are we?";
