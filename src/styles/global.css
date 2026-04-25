@@ -93,26 +93,6 @@ nav>button:hover {
     color: var(--color-green);
 }
 
-.name {
-    display: flex;
-}
-
-.name>div:first-child {
-    color: var(--color-green);
-}
-
-.name>div:last-child {
-    color: var(--color-cyan);
-}
-
-#content {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 2fr min-content 1fr 1fr;
-
-}
-
-
 footer {
     margin-top: 1rem;
     border-top: 1px solid var(--color-border);

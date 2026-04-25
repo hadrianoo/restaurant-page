@@ -1,6 +1,9 @@
 import styles from "./home.module.css";
 
 export const homePage = () => {
+    const homeContainer = document.createElement("div");
+    homeContainer.className = styles.homeContainer;
+
     const introSection = () => {
         const intro = document.createElement("div");
         const name = document.createElement("div");
@@ -16,7 +19,7 @@ export const homePage = () => {
 
         intro.className = styles.intro;
         name.className = styles.name;
-        nameButtons.className = styles["name-buttons"];
+        nameButtons.className = styles.nameButtons;
 
         web.textContent = "Web";
         mac.textContent = "Mac";
@@ -97,7 +100,7 @@ export const homePage = () => {
             const third = document.createElement("div");
             const forth = document.createElement("div");
 
-            homeDish.className = styles["home-dish"];
+            homeDish.className = styles.homeDish;
 
             first.textContent = obj[1];
             second.textContent = obj[2];
@@ -168,11 +171,17 @@ export const homePage = () => {
 
         return reviews;
     }
+    homeContainer.appendChild(introSection());
+    homeContainer.appendChild(servedSection());
+    homeContainer.appendChild(specialSection());
+    homeContainer.appendChild(reviewSection());
+
 
     return {
-        introSection,
-        servedSection,
-        specialSection,
-        reviewSection
+        // introSection,
+        // servedSection,
+        // specialSection,
+        // reviewSection
+        homeContainer,
     }
 }

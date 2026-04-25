@@ -1,3 +1,9 @@
+.homeContainer {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr min-content 1fr 1fr;
+}
+
 .intro {
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
@@ -12,6 +18,18 @@
 .intro>.name {
     font-size: 6rem;
     text-transform: uppercase;
+}
+
+.name {
+    display: flex;
+}
+
+.name>div:first-child {
+    color: var(--color-green);
+}
+
+.name>div:last-child {
+    color: var(--color-cyan);
 }
 
 .intro>div:nth-child(3) {
@@ -29,12 +47,12 @@
     margin-bottom: 0.6rem;
 }
 
-.name-buttons {
+.nameButtons {
     display: flex;
     gap: 1rem;
 }
 
-.name-buttons>button {
+.nameButtons>button {
     padding: 1rem 1.4rem;
     background-color: var(--color-bg-primary);
     border: 1px solid grey;
@@ -42,7 +60,7 @@
     color: white;
 }
 
-.name-buttons>button:hover {
+.nameButtons>button:hover {
     background-color: var(--color-bg-secondary);
 }
 
@@ -90,7 +108,7 @@
     justify-self: center;
 }
 
-.home-dish,
+.homeDish,
 .review {
     padding: 1rem;
     background-color: var(--color-bg-secondary);

@@ -1,6 +1,9 @@
 import styles from "./menu.module.css";
 
 export const menuPage = () => {
+    const menuContainer = document.createElement("div");
+    menuContainer.className = styles.menuContainer;
+
     const menu = [
         { name: "404 Burger", description: "Ingredients not found — but it still tastes great.", price: 8.99, category: "Mains" },
         { name: "SQL Injection Soup", description: "'; DROP TABLE hunger; --", price: 7.99, category: "Soups" },
@@ -32,7 +35,7 @@ export const menuPage = () => {
 
     const menuContent = () => {
         const menuContainer = document.createElement("div");
-
+        menuContainer.className = styles.menuGrid;
         for (const item of menu) {
             const menuItem = document.createElement("div");
             const name = document.createElement("div");
@@ -56,8 +59,9 @@ export const menuPage = () => {
         return menuContainer;
     };
 
+    menuContainer.appendChild(menuHeader());
+    menuContainer.appendChild(menuContent());
     return {
-        menuHeader,
-        menuContent,
+        menuContainer,
     }
 };

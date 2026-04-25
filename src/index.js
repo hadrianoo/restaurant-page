@@ -11,26 +11,28 @@ const renderPage = (() => {
     const content = document.querySelector("#content");
     const body = document.querySelector("body");
 
-
-    content.appendChild(home.introSection());
-    content.appendChild(home.servedSection());
-    content.appendChild(home.specialSection());
-    content.appendChild(home.reviewSection());
+    content.appendChild(home.homeContainer);
+    // content.appendChild(home.introSection());
+    // content.appendChild(home.servedSection());
+    // content.appendChild(home.specialSection());
+    // content.appendChild(home.reviewSection());
 
 
     nav.addEventListener("click", (event) => {
         if (event.target.id === "home") {
             content.innerHTML = "";
-            content.appendChild(home.introSection());
-            content.appendChild(home.servedSection());
-            content.appendChild(home.specialSection());
-            content.appendChild(home.reviewSection());
+
+            content.appendChild(home.homeContainer);
+            // content.appendChild(home.introSection());
+            // content.appendChild(home.servedSection());
+            // content.appendChild(home.specialSection());
+            // content.appendChild(home.reviewSection());
 
         } else if (event.target.id === "menu") {
             content.innerHTML = "";
 
-            content.appendChild(menu.menuHeader());
-            content.appendChild(menu.menuContent());
+            content.appendChild(menu.menuContainer);
+            // content.appendChild(menu.menuContent());
 
         } else if (event.target.id === "about") {
             content.innerHTML = "";
