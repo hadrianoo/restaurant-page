@@ -1,5 +1,6 @@
-export const homePage = () => {
+import styles from "./home.module.css";
 
+export const homePage = () => {
     const introSection = () => {
         const intro = document.createElement("div");
         const name = document.createElement("div");
@@ -13,9 +14,9 @@ export const homePage = () => {
         const viewMenuButton = document.createElement("button");
         const bookTableButton = document.createElement("button");
 
-        intro.id = "intro";
-        name.className = "name";
-        nameButtons.id = "name-buttons";
+        intro.className = styles.intro;
+        name.className = styles.name;
+        nameButtons.className = styles["name-buttons"];
 
         web.textContent = "Web";
         mac.textContent = "Mac";
@@ -46,8 +47,8 @@ export const homePage = () => {
         const title = document.createElement("div");
         const servedNumber = document.createElement("div");
 
-        served.id = "served";
-        title.className = "title";
+        served.className = styles.served;
+        title.className = styles.title;
 
         title.textContent = "// total customers served";
         servedNumber.textContent = "1 554 420";
@@ -84,8 +85,8 @@ export const homePage = () => {
         const title = document.createElement("div");
         const specialsContainer = document.createElement("div");
 
-        title.className = "title";
-        specials.id = "specials";
+        title.className = styles.title;
+        specials.className = styles.specials;
 
         title.textContent = "// today's specials";
 
@@ -96,7 +97,7 @@ export const homePage = () => {
             const third = document.createElement("div");
             const forth = document.createElement("div");
 
-            homeDish.className = "home-dish";
+            homeDish.className = styles["home-dish"];
 
             first.textContent = obj[1];
             second.textContent = obj[2];
@@ -139,8 +140,8 @@ export const homePage = () => {
         const title = document.createElement("div");
         const reviewContainer = document.createElement("div");
 
-        title.className = "title";
-        reviews.id = "reviews";
+        title.className = styles.title;
+        reviews.className = styles.reviews;
 
         title.textContent = "// customer reviews";
 
@@ -150,7 +151,7 @@ export const homePage = () => {
             const second = document.createElement("div");
             const third = document.createElement("div");
 
-            review.className = "review";
+            review.className = styles.review;
 
             first.textContent = obj[1];
             second.textContent = obj[2];

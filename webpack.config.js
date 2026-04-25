@@ -22,9 +22,25 @@ export default {
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                test: /\.module\.css$/i,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: {
+                                namedExport: false,
+                                localIdentName: "[name]__[local]__[hash:base64:5]"
+                            }
+                        }
+                    }
+                ]
             },
-        ],
+            {
+                test: /\.css$/i,
+                exclude: /\.module\.css$/i,
+                use: ["style-loader", "css-loader"]
+            }
+        ]
     },
 };
