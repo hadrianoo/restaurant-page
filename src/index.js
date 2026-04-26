@@ -16,17 +16,13 @@ const renderPage = (() => {
     content.appendChild(home);
 
     nav.addEventListener("click", (event) => {
-        if (event.target.id === "home") {
+
+        if (event.target.id !== "navBar") {
             content.innerHTML = "";
-            content.appendChild(home);
-        } else if (event.target.id === "menu") {
-            content.innerHTML = "";
-            content.appendChild(menu);
-        } else if (event.target.id === "about") {
-            content.innerHTML = "";
-            content.appendChild(about)
-        }
-    })
+            const pages = { home, menu, about };
+            content.appendChild(pages[event.target.id]);
+        };
+    });
     body.appendChild(footer);
 })();
 
