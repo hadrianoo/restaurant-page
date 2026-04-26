@@ -50,6 +50,7 @@ export const aboutPage = () => {
         const container = document.createElement("div");
         const title = document.createElement("div");
         const content = document.createElement("div");
+        const wrapper = document.createElement("div");
         const statements = [
             {
                 name: "HUNGER",
@@ -69,6 +70,7 @@ export const aboutPage = () => {
         ]
 
         container.className = styles.mission;
+        title.className = styles.title;
         title.textContent = "// MISSION STATEMENT";
         container.appendChild(title);
 
@@ -85,8 +87,9 @@ export const aboutPage = () => {
             statement.appendChild(name);
             statement.appendChild(first);
             statement.appendChild(second);
-            container.appendChild(statement);
+            wrapper.appendChild(statement);
         }
+        container.appendChild(wrapper);
         return container;
     };
 
@@ -94,6 +97,8 @@ export const aboutPage = () => {
         const container = document.createElement("div");
         const title = document.createElement("div");
         const content = document.createElement("div");
+        const wrapper = document.createElement("div");
+
         const technology = [
             {
                 name: "INFRASTRUCTURE",
@@ -114,6 +119,7 @@ export const aboutPage = () => {
         ]
 
         container.className = styles.kitchen;
+        title.className = styles.title;
         title.textContent = "// KITCHEN TECHNOLOGY";
         container.appendChild(title);
 
@@ -127,8 +133,9 @@ export const aboutPage = () => {
 
             techContainer.appendChild(name);
             techContainer.appendChild(first);
-            container.appendChild(techContainer);
+            wrapper.appendChild(techContainer);
         }
+        container.appendChild(wrapper);
         return container;
     };
 
@@ -137,6 +144,8 @@ export const aboutPage = () => {
         const container = document.createElement("div");
         const title = document.createElement("div");
         const content = document.createElement("div");
+        const wrapper = document.createElement("div");
+
         const certs = [
             "ISO 9001",
             "GDPR Compliant",
@@ -147,6 +156,7 @@ export const aboutPage = () => {
         ];
 
         container.className = styles.certification;
+        title.className = styles.title;
         title.textContent = "// CERTIFICATIONS";
         container.appendChild(title);
 
@@ -155,8 +165,10 @@ export const aboutPage = () => {
 
             certItem.textContent = item;
 
-            container.appendChild(certItem);
+            wrapper.appendChild(certItem);
         };
+        container.appendChild(wrapper);
+
         return container;
     };
 

@@ -101,4 +101,5 @@ footer {
     justify-content: space-between;
     padding: 2rem 4rem;
     align-items: center;
+    color: var(--color-green-trace);
 }
