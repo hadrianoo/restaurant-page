@@ -49,7 +49,6 @@ export const aboutPage = () => {
     const mission = () => {
         const container = document.createElement("div");
         const title = document.createElement("div");
-        const content = document.createElement("div");
         const wrapper = document.createElement("div");
         const statements = [
             {
@@ -96,7 +95,6 @@ export const aboutPage = () => {
     const kitchen = () => {
         const container = document.createElement("div");
         const title = document.createElement("div");
-        const content = document.createElement("div");
         const wrapper = document.createElement("div");
 
         const technology = [
