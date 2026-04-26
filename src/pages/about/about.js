@@ -139,7 +139,6 @@ export const aboutPage = () => {
         return container;
     };
 
-
     const certifications = () => {
         const container = document.createElement("div");
         const title = document.createElement("div");
@@ -171,9 +170,6 @@ export const aboutPage = () => {
 
         return container;
     };
-
-
-
 
     aboutContainer.appendChild(aboutMd());
     aboutContainer.appendChild(readmeTxt());

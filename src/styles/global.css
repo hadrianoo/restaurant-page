@@ -53,10 +53,6 @@
     font-size: 62.5%;
 }
 
-/* * {
-    border: 1px solid red;
-} */
-
 body {
 
     margin: 0px;
@@ -76,6 +72,18 @@ header {
 
 header>.name {
     font-size: 3rem;
+}
+
+.name {
+    display: flex;
+}
+
+.name>div:first-child {
+    color: var(--color-green);
+}
+
+.name>div:last-child {
+    color: var(--color-cyan);
 }
 
 nav {

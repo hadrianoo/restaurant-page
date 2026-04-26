@@ -23,7 +23,7 @@ export const homePage = () => {
 
         web.textContent = "Web";
         mac.textContent = "Mac";
-        since.textContent = "Powering your hunger since 1993";
+        since.textContent = "> Powering your hunger since 1993 <";
         loading.textContent = "Loading flavors... 99%"
         viewMenuButton.textContent = "View Menu";
         bookTableButton.textContent = "Book a Table";

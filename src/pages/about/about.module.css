@@ -5,7 +5,6 @@
     justify-self: center;
     margin-top: 6rem;
     margin-bottom: 3rem;
-
 }
 
 .title {
@@ -20,8 +19,6 @@
     margin: 0;
     border-bottom: 1px solid var(--color-border);
 }
-
-.aboutMd>div:first-child {}
 
 .aboutMd>div:nth-child(2) {
     margin: 0 6rem;
@@ -122,7 +119,6 @@
 }
 
 .certification>div:last-child {
-    /* padding: 2rem; */
     margin: 0 6rem;
 
     display: flex;
